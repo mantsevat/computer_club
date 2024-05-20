@@ -1,5 +1,5 @@
 #include <string>
-
+#pragma once
 struct Table
 {
     bool busy;

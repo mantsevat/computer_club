@@ -4,7 +4,7 @@
 class Event
 {
 public:
-    virtual void toStr(){};
+    virtual void toStr()= 0;
     unsigned int getTime() const;
 
 protected:

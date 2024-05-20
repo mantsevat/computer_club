@@ -87,12 +87,5 @@ std::vector<InEvent *> EventReader::readEvents(std::ifstream &open_file)
         }
     }
 
-    std::vector<InEvent*>::iterator iter;
-
-    for (iter = inevents.begin(); iter!=inevents.end();iter++)
-    {  
-        std::cout<<(*iter)->getClient();
-    }
-
     return inevents;
 }

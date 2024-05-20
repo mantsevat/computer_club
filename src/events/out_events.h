@@ -1,5 +1,6 @@
 #include "event.h"
-#pragma once
+#ifndef OUT_EVENTS_H
+#define OUT_EVENTS_H
 enum class OutEventType
 {
     LEFT,
@@ -13,6 +14,7 @@ protected:
     OutEventType type;
 
 public:
+    virtual void toStr()=0;
     OutEvent(unsigned int timem, OutEventType type);
 };
 
@@ -23,6 +25,7 @@ private:
 
 public:
     OutLeft(unsigned int timem, OutEventType type, std::string client);
+    void toStr();
 };
 
 class OutSat : public OutEvent
@@ -33,6 +36,7 @@ private:
 
 public:
     OutSat(unsigned int timem, OutEventType type, std::string client, unsigned int table);
+    void toStr();
 };
 
 class OutError : public OutEvent
@@ -42,4 +46,6 @@ private:
 
 public:
     OutError(unsigned int timem, OutEventType type, std::string er);
+    void toStr();
 };
+#endif

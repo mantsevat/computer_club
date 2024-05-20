@@ -1,4 +1,5 @@
 #include "out_events.h"
+#include <iostream>
 OutEvent::OutEvent(unsigned int timem, OutEventType type)
 {
     timeM = timem;
@@ -16,4 +17,16 @@ OutSat::OutSat(unsigned int timem, OutEventType type, std::string client, unsign
 {
     this->client = client;
     this->table;
+}
+void OutError::toStr()
+{
+    std::cout << timeToStr() << " " << static_cast<unsigned int>(type)+11 << " " << errStr << '\n';
+}
+void OutLeft::toStr()
+{
+    std::cout << timeToStr() << " " << static_cast<unsigned int>(type)+11 << " " << client << '\n';
+}
+void OutSat::toStr()
+{
+    std::cout << timeToStr() << " " << static_cast<unsigned int>(type)+11 << " " << client << " " << table << '\n';
 }
