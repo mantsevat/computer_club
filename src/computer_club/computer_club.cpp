@@ -129,3 +129,11 @@ void ComputerClub::initTableMap()
         tables.insert({i, Table()});
     }
 }
+
+ComputerClub::~ComputerClub()
+{
+    for (auto ev: events){
+        delete ev;
+    }
+    events.clear();
+}
