@@ -1,8 +1,9 @@
 #include "computer_manager.h"
-#include "computer_club.h"
-#include "event_reader.h"
+#include "./computer_club/computer_club.h"
+#include "./computer_club/event_reader.h"
 #include <iostream>
 #include <fstream>
+#include <exception>
 
 void ComputerManager::createStartCClub(char *filename)
 {
@@ -24,7 +25,7 @@ void ComputerManager::createStartCClub(char *filename)
         cc.processEvents(ev.readEvents(settingsfile));
         cc.printReport();
     }
-    catch (std::exception e)
+    catch (const std::exception& e)
     {
         std::cout << "Error: " << e.what() << "\n";
     }
