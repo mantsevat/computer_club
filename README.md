@@ -10,6 +10,6 @@ make
 ```
 ## Запуск программы
 ```
-./computer_club "somefile.txt"
+./computerclub "somefile.txt"
 ```
 Также можно указать путь к одному из тестовых примеров в папке "examples"
