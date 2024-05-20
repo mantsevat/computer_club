@@ -19,7 +19,7 @@ class ComputerClub
 {
 public:
     ComputerClub();
-    ~ComputerClub();
+   ~ComputerClub();
     void setSettings(ClubSettings sets);
     void processEvents(std::vector<InEvent *>);
     void printReport() const;
@@ -37,5 +37,6 @@ private:
     std::map<std::string, unsigned int> clients;
     std::queue<std::string> waiting;
     void initTableMap();
+    void incomeAtClosing();
 };
 #endif

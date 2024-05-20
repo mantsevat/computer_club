@@ -2,9 +2,8 @@
 #pragma once
 struct Table
 {
-    bool busy;
-    std::string client;
-    unsigned int income;
-    unsigned int timeBusy;
-    unsigned int time_sat;
+    bool busy = false;
+    std::string client = "";
+    unsigned int timeBusy = 0;
+    unsigned int time_sat = 0;
 };

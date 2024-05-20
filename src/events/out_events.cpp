@@ -16,7 +16,7 @@ OutError::OutError(unsigned int timem, OutEventType type, std::string er) : OutE
 OutSat::OutSat(unsigned int timem, OutEventType type, std::string client, unsigned int table) : OutEvent(timem, type)
 {
     this->client = client;
-    this->table;
+    this->table = table;
 }
 void OutError::toStr()
 {
