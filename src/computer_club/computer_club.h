@@ -19,6 +19,7 @@ class ComputerClub
 {
 public:
     ComputerClub();
+    ~ComputerClub();
     void setSettings(ClubSettings sets);
     void processEvents(std::vector<InEvent *>);
     void printReport() const;
